@@ -1,4 +1,3 @@
-from tkinter import W
 import pygame
 WIDTH = 600
 HEIGHT = 600
