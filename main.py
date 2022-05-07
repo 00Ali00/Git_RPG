@@ -18,7 +18,10 @@ class Game:
     def new(self):
         # initialize all variables and do all the setup for a new game
         self.all_sprites = pg.sprite.Group()
-        self.player = Player(self, 0, 0)
+        self.walls = pg.sprite.Group()
+        self.player = Player(self, 10, 10)
+        for x in range(10, 20):
+            Wall(self, x, 5)
 
     def run(self):
         # game loop - set self.playing = False to end the game
