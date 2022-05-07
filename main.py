@@ -19,6 +19,20 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH / 2, HEIGHT / 2)
 
+    def update(self):
+        self.move_x, self.move_y = 0, 0
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_UP]:
+            self.move_y -= 5
+        if keys[pygame.K_DOWN]:
+            self.move_y += 5
+        if keys[pygame.K_LEFT]:
+            self.move_x -= 5
+        if keys[pygame.K_RIGHT]:
+            self.move_x += 5
+        self.rect.x += self.move_x
+        self.rect.y += self.move_y
+
 
 pygame.init()
 pygame.mixer.init()
