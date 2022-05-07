@@ -23,13 +23,13 @@ class Player(pygame.sprite.Sprite):
         self.move_x, self.move_y = 0, 0
         keys = pygame.key.get_pressed()
         if keys[pygame.K_UP]:
-            self.move_y -= 5
+            self.move_y -= 3
         if keys[pygame.K_DOWN]:
-            self.move_y += 5
+            self.move_y += 3
         if keys[pygame.K_LEFT]:
-            self.move_x -= 5
+            self.move_x -= 3
         if keys[pygame.K_RIGHT]:
-            self.move_x += 5
+            self.move_x += 3
         self.rect.x += self.move_x
         self.rect.y += self.move_y
 
