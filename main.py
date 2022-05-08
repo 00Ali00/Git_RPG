@@ -20,7 +20,7 @@ class Game:
         self.all_sprites = pg.sprite.Group()
         self.walls = pg.sprite.Group()
         self.player = Player(self, 10, 10)
-        for x in range(10, 20):
+        for x in range(1, 10):
             Wall(self, x, 5)
 
     def run(self):
